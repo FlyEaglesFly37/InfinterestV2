@@ -1,0 +1,90 @@
+@{
+    ViewData["Title"] = "Infinterest - Vendor Profile";
+}
+
+@section css {  
+  <link href="@Url.Content("~/css/nav.css")" rel="stylesheet" type="text/css" />
+  <link href="@Url.Content("~/css/profilestyle.css")" rel="stylesheet" type="text/css" />
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<div class="grey">
+  <header>
+    <img src="../images/white-nosub-inflogo.png" alt="logo" class="white-logo">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+        <ul>
+          <li><a href="/dashboard">Home</a></li>
+          <li><a href="http://infinterest.com/#home">About</a></li>
+          <li><a href="/messaging">Messaging</a></li>
+          <li><a href="/logoff">Sign out</a></li>
+        </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+  </header>
+<div class="container">
+  <div class="content" id="vendor-profile">
+    <div class="shadow-box top-box"> 
+      <div>
+       <img class="logo-pic" src="../images/jimmyjohns.jpg" alt="">
+      </div>
+      <div>
+        <h3>Jimmy Johns</h3>
+        <p>Delivering super fast gourmet sandwiches.</p>
+        <div class="star-ratings-sprite">
+          <span style="width:89%" class="star-ratings-sprite-rating"></span> 
+        </div>
+        <p class="d-inline">53 reviews </p>
+      </div>
+   </div>
+    <div class="shadow-box contact-info">
+      <a class="item" href="/remax.com">jimmyjohns.com</a>
+      <p class="item">(206)708-6836</p>
+      <div class="item">
+        <a href="https://www.instagram.com/remax/?hl=en"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/remax-central/about/"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/search?q=remax&src=tyah"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/search?q=remax&src=tyah"><i class="fab fa-twitter"></i></a><br>
+      </div>
+      <div class="item">
+        <button type="button" class="favBut btn btn-danger">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Favorite
+          </button>
+      </div>
+      <div class="item">
+        <a href="#message" rel="modal:open"><button type="button item" class="btn btn-outline-primary">
+          <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Message
+          </button>
+        </a>
+      </div>
+      <div id="message" class="modal">
+        <div class="form-group">
+          
+          <label for="Message">Message</label>
+          <textarea class="form-control" id="Message" placeholder="Enter message" rows="5"></textarea>
+        </div>  
+        <button><a href="#" rel="modal:close">Send</a></button>
+      </div>
+        
+      
+    </div>
+    <div class="shadow-box vendor-pic">
+      <img class="" src="../images/sandwich1.jpg" alt="">
+      <img class="" src="../images/sandwich.jpg" alt="">
+      <img class="" src="../images/sandwich3.jpg" alt="">
+    </div>
+    
+    <!-- End of content/broker-profile -->
+    </div>
+
+    
+
+  <!-- End of container -->
+  </div>
+<!-- End of grey -->
+</div>

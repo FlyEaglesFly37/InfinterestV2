@@ -1,0 +1,147 @@
+﻿<!-- model UserValidator -->
+@{
+    ViewData["Title"] = "Vendor Registration";
+}
+
+@section css {
+    <link href="@Url.Content("~/css/registrationstyle.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/nav.css")" rel="stylesheet" type="text/css" />
+}
+
+<header>
+  <img src="../images/white-nosub-inflogo.png" alt="logo" class="white-logo">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+      <ul>
+        <li><a href="http://infinterest.com/#home">About</a></li>
+        <li><a class="" href="broker-registration">Broker Sign Up</a></li>
+        <li><a class="login text-white" href="#loginModal" data-toggle="modal">Log In</a></li>
+      </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+  </label>
+</header>
+<div id="container"> 
+    <div class="regbox">
+        <h4>Vendor Registration</h4>
+        <form class="" role="form" action="/dashboard" method="get">
+            <div class="wrapper">
+                <div class="box1">
+                    <div class="form-group">
+                        <label for="FirstName">First name</label>
+                        <input type="text" class="form-control" id="FirstName" placeholder="Enter first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Last name</label>
+                        <input type="text" class="form-control" id="LastName" placeholder="Enter last name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" class="form-control" id="Email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" class="form-control" id="Password" placeholder="Enter password">
+                    </div>
+                    <div class="form-group">
+                        <label for="PasswordConfirm">Confirm password</label>
+                        <input type="password" class="form-control" id="PasswordConfirm" placeholder="Confirm password">
+                    </div>
+                    <!-- Fields common to vendor and broker -->
+                    <div class="form-group">
+                        <label for="Website">Your website</label>
+                        <input type="text" class="form-control" id="Website" placeholder="Enter website">
+                    </div>
+                    <div class="form-group">
+                        <label for="Number">Phone number</label>
+                        <input type="text" class="form-control" id="Number" placeholder="Enter phone number">
+                    </div> 
+                </div>
+                <div class="box2">  
+                    
+                    <!-- Fields unique to vendor -->
+                    <div class="form-group">
+                        <label for="Company">Company</label>
+                        <input type="text" id="Company" class="form-control" placeholder="Enter company name">
+                    </div> 
+                    <div class="form-group">
+                        <label for="Bio">Your bio</label>
+                        <textarea class="form-control" id="Bio" placeholder="Enter bio" rows="3"></textarea>
+                    </div>   
+                    <div class="form-group">
+                        <label for="Logo">Logo</label>
+                        <input type="file" class="form-control-file form-text text-muted" id="Logo">
+                    </div> 
+                    <div class="form-group">
+                        <label for="Pictures">Pictures</label>
+                        <input type="file" class="form-control-file form-text text-muted" id="Pictures" multiple>
+                    </div>        
+                    <div class="form-group">
+                        <label for="">Business Category</label>
+                        <div class="checkbox">
+                            <input type="checkbox" id="Landscaping" name="BusinessCategory" value="Landscaping">
+                            <label for="Landscaping">Landscaping</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="Photography" name="BusinessCategory" value="Photography">
+                            <label for="Photography">Photography</label>
+                        </div>    
+                        <div class="checkbox">
+                            <input type="checkbox" id="MusiciansDJs" name="BusinessCategory" value="MusiciansDJs">
+                            <label for="MusiciansDJs">Musicians / DJs</label>
+                        <div class="checkbox"> 
+                            <input type="checkbox" id="InteriorDecorators" name="BusinessCategory" value="InteriorDecorators">
+                            <label for="InteriorDecorators">Interior Decorators</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="FoodCatering" name="BusinessCategory" value="FoodCatering">
+                            <label for="FoodCatering">Food / Catering</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="Home-based" name="BusinessCategory" value="Home-based">
+                            <label for="Home-based">Home-based Businesses (Candles, Soaps, Etc.)</label>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="Other" name="BusinessCategory" value="other">
+                            <label for="Other">Other</label>
+                            <input class="form-control" type="text" id="otherValue" name="other" placeholder="Enter business category">
+                        </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Save and continue</button>
+        </form>
+    </div>    
+</div>
+<div id="loginModal" class="modal fade" role="form">
+    <div class="modal-dialog">
+        <!-- Login Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Login</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form role="form" action="/dashboard" method="get">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="usrname">Username</label>
+                        <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="psw">Password</label>
+                        <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                    </div>
+                        <div class="checkbox">
+                        <label><input type="checkbox" value="" checked>Remember me</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div> 
+    </div>
+</div>

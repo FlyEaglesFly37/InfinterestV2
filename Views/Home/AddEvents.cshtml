@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "Adding Events";
+}
+
+@section css {
+    <link href="@Url.Content("~/css/addeventsstyle.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/nav.css")" rel="stylesheet" type="text/css" />
+}
+
+    <header>
+ 
+  <img src="../images/white-nosub-inflogo.png" alt="logo" class="white-logo">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+      <ul>
+      <li><a href="/dashboard">Home</a></li>
+      <li><a href="http://infinterest.com/#home">About</a></li>
+      <li><a href="/messaging">Messaging</a></li>
+      <li><a href="/logoff">Sign out</a></li>
+      </ul>
+  </nav>
+
+  <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+  </label>
+  </header>
+  <div class="ultimatecontainer">
+    <div class="container"> 
+        <form class="regbox" role="form" action="/dashboard" method="get">
+        <h4>Create a new Open House event.</h4>
+            <div class="row">
+                <!-- Fields common to all users -->
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="MLSLink">MLS Link</label>
+                        <input type="text" class="form-control" id="MLSLink" placeholder="Please enter URL">
+                    </div>
+                    <div class="form-group">
+                        <label for="OpenHouseDate">Open House Date</label>
+                        <input type="date" class="form-control" id="ohdate">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Area of the house to be featured</label>
+                        <input type="email" class="form-control" id="AreaofHouse" placeholder="Kitchen, Garage, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Price</label>
+                        <input type="number" class="form-control" id="Price">
+                    </div>
+                    <div class="form-group">
+                        <label for="PasswordConfirm">Zip Code</label>
+                        <input type="password" class="form-control" id="Zip">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Event</button>
+                </div>
+            </div>    
+        </form>
+    </div>
+</div>

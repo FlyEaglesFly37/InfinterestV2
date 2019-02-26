@@ -1,0 +1,80 @@
+body, html, .ultimatecontainer{
+    height: 100%;
+}
+
+.ultimatecontainer{
+    background-image: url("../images/open-house.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    padding-top: 50px;
+}
+
+label{
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.form-control{
+    height: 50px;
+    font-size: 16px;
+    padding: 12px 12px;
+    color: #202020;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #202020;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #202020;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #202020;
+}
+
+.checkbox input {
+    margin-left: 0!important;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.regbox {
+    background-color: rgb(32, 32, 32);
+    border-radius: 5px;
+    box-shadow: 2px 2px;
+    margin: 3% 10%;
+    padding: 0% 3%  1em;
+    display: inline-block; 
+}
+
+.regbox h4 {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.btn-primary{
+    margin-left: 35%;
+    margin-top: 3%;
+    background-color: #35BFFF !important;
+    color: whitesmoke !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+}
+
+.btn-primary:hover{
+    background-color: rgb(22, 138, 192) !important;
+}
+
+

@@ -1,0 +1,95 @@
+@{
+    ViewData["Title"] = "Infinterest - View Profile";
+}
+
+@section css {
+    <link href="@Url.Content("~/css/site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/profilestyle.css")" rel="stylesheet" type="text/css" />
+}
+<nav class="header"> 
+      <a href="/dashboard"><img src="../images/white-nosub-inflogo.png" alt="logo" class="whitelogo"></a> 
+      <div class="navlinks">
+          <a class="nav-link" href="http://infinterest.com/#home">About</a>
+          <a class="nav-link" href="/messaging">Messaging</a>
+          <a class="nav-link" href="/profile">Profile</a>
+          <a class="nav-link" href="/logoff">Sign out</a>
+      </div>
+  </nav>
+
+
+<div class="container mt-5"> 
+  <p class="d-inline">Allow brokers to search and view your profile?</p>
+  <label class="switch d-inline-block">
+    <input type="checkbox">
+    <span class="slider round"></span>
+  </label>
+  <a href="" class="d-block">What do brokers see?</a><br>
+  
+  
+    <table class="table profile">
+      <tbody>
+        <tr>
+          <th scope="row"><h3>Profile</h3></th>
+          <td><a href="#" class="btn btn-primary">Edit Profile</a></td>
+        </tr>
+        <tr>
+          <th scope="row">First Name</th>
+          <td>Mark</td>
+        </tr>
+        <tr>
+          <th scope="row">Last Name</th>
+          <td>Jacob</td>
+        </tr>
+        <tr>
+          <th scope="row">Email</th>
+          <td>MarkJacob@gmail.com</td>
+        </tr>
+        <tr>
+          <th scope="row">Contact</th>
+          <td>Mark Jacob</td>
+        </tr>
+        <tr>
+          <th scope="row">Contact</th>
+          <td>Mark Jacob</td>
+        </tr>
+        <tr>
+          <th scope="row">Phone Number</th>
+          <td>206-555-9999
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Your bio</th>
+          <td>Specialize in gourmet cookies<br>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Logo</th>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Profile Picture</th>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Company</th>
+          <td>Mark's Cookies
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Area of home you request?</th>
+          <td>Kitchen
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Business Category</th>
+          <td>Food / Catering</td>
+        </tr>
+       
+        
+      </tbody>
+    </table>
+
+    
+</div>

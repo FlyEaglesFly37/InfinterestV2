@@ -1,0 +1,213 @@
+/* 
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+
+body {
+    margin: 0;
+    background: #222;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+} */
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
+  
+
+/* navigation styles start here */
+
+header {
+    background: black;
+    /* text-align: center; */
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+.white-logo{
+    width: 18%;
+    margin: 1%;
+}
+
+/* changed this from the tutorial video to
+allow it to gain focus, making it tabbable */
+.nav-toggle {
+position: absolute !important;
+top: -9999px !important;
+left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+position: absolute;
+top: 0;
+right: 0;
+margin-right: 1em;
+height: 100%;
+display: flex;
+align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+display: block;
+background: white;
+height: 2px;
+width: 2em;
+border-radius: 2px;
+position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+content: '';
+position: absolute;
+}
+
+.nav-toggle-label span::before {
+bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+top: 7px;
+}
+
+
+nav {
+position: absolute;
+text-align: right;
+top: 100%;
+right: 0;
+background: black;
+width: 100%;
+transform: scale(1, 0);
+transform-origin: top;
+transition: transform 400ms ease-in-out;
+display: inline-block !important;
+}
+
+nav ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+nav li {
+margin-bottom: 1em;
+margin-right: 1em;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-size: 1.2rem;
+text-transform: uppercase;
+opacity: 0;
+transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+color: white;
+text-decoration: none;
+}
+/* Once checked, checks for all nav siblings after .nav-toggle  */
+.nav-toggle:checked ~ nav {
+transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+opacity: 1;
+transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid !important;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .white-logo {
+        grid-column: 1 / 2; 
+        width: 25%;
+        /* height: auto; */
+        margin: .5em;
+    }
+    
+    nav {
+        
+        /* all: unset; /* this causes issues with Edge, since it's unsupported */
+        
+        /* the following lines are not from my video, but add Edge support */
+        position: relative;
+        text-align: right;
+        transition: none;
+        transform: scale(1,1);
+        background: none;
+        top: initial;
+        left: initial;
+        /* end Edge support stuff */
+        
+        grid-column: 2 / 4;
+        display: flex !important;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    nav ul {
+        display: flex;
+    }
+    
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+    
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+    
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: whitesmoke;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+    
+    nav a:hover::before {
+        transform: scale(1,1);
+    }
+}
+
+

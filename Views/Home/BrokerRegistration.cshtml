@@ -1,0 +1,110 @@
+﻿<!-- model UserValidator -->
+@{
+    ViewData["Title"] = "Broker Registration";
+}
+
+@section css {
+    <link href="@Url.Content("~/css/registrationstyle.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/nav.css")" rel="stylesheet" type="text/css" />
+}
+
+<header>
+  <img src="../images/white-nosub-inflogo.png" alt="logo" class="white-logo">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+      <ul>
+        <li><a href="http://infinterest.com/#home">About</a></li>
+        <li><a class="" href="vendor-registration">Vendor Sign Up</a></li>
+        <li><a class="login text-white" href="#loginModal" data-toggle="modal">Log In</a></li>
+      </ul>
+  </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+  </label>
+</header>
+<div id="container"> 
+    <div class="regbox">
+        <h4>Broker Registration</h4>
+        <form class="" role="form" action="/dashboard" method="get">
+            <div class="wrapper">
+                <div class="box1">
+                    <div class="form-group">
+                        <label for="FirstName">First name</label>
+                        <input type="text" class="form-control" id="FirstName" placeholder="Enter first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Last name</label>
+                        <input type="text" class="form-control" id="LastName" placeholder="Enter last name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="email" class="form-control" id="Email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" class="form-control" id="Password" placeholder="Enter password">
+                    </div>
+                    <div class="form-group">
+                        <label for="PasswordConfirm">Confirm password</label>
+                        <input type="password" class="form-control" id="PasswordConfirm" placeholder="Confirm password">
+                    </div>
+                </div>
+                <div class="box2">  
+                    <div class="form-group">
+                        <label for="Company">Company</label>
+                        <input type="text" id="Company" class="form-control" placeholder="Enter company name">
+                    </div> 
+                    <div class="form-group">
+                        <label for="Website">Your website</label>
+                        <input type="text" class="form-control" id="Website" placeholder="Enter website">
+                    </div>
+                    <div class="form-group">
+                        <label for="Number">Phone number</label>
+                        <input type="text" class="form-control" id="Number" placeholder="Enter phone number">
+                    </div> 
+                    <div class="form-group">
+                        <label for="Bio">Your bio</label>
+                        <textarea class="form-control" id="Bio" placeholder="Enter bio" rows="3"></textarea>
+                    </div>   
+                    <div class="form-group">
+                        <label for="Picture">Picture</label>
+                        <input type="file" class="form-control-file form-text text-muted" id="Pictures">
+                    </div>        
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Save and continue</button>
+        </form>
+    </div>      
+</div>
+<div id="loginModal" class="modal fade" role="form">
+    <div class="modal-dialog">
+        <!-- Login Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Login</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form role="form" action="/dashboard" method="get">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="usrname">Username</label>
+                        <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="psw">Password</label>
+                        <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                    </div>
+                        <div class="checkbox">
+                        <label><input type="checkbox" value="" checked>Remember me</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div> 
+    </div>
+</div>

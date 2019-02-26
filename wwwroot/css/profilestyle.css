@@ -1,0 +1,181 @@
+.content {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  height: 100%;
+  background-size: cover;
+  padding-top: 2em;
+}
+.grey {
+  height: 250vh;
+}
+/* Rating */
+.star-ratings-sprite {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+  font-size: 0;
+  height: 21px;
+  line-height: 0;
+  overflow: hidden;
+  text-indent: -999em;
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 13px;
+}
+.star-ratings-sprite-rating {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/2605/star-rating-sprite.png") repeat-x;
+    background-position: 0 100%;
+    float: left;
+    height: 21px;
+    display:block;
+}
+.top-box {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/* Youtube */
+.youTube iframe{
+  width: 100%;
+}
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact-info .item{
+ margin-bottom: 10px;
+}
+/* Social Media Icons */
+.contact-info i{
+  margin: 0px 10px 10px;
+  font-size: 1.5em;
+}
+/* Buttons */
+.btn {
+height: 30px;
+width: 100px;
+}
+.btn-outline-primary{
+  border-color: #343a40 !important;
+  color: #343a40 !important;
+}
+
+/* Vendor will be logo and Broker will be picture of self */
+.profile-pic{
+  width: 100%;
+}
+/* Vendor will be logo and Broker will be picture of self */
+.logo-pic{
+  width: 130px;
+}
+.vendor-pic {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+.vendor-pic img{
+  width: 100%;
+  margin-bottom: .5em;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #broker-profile{
+    display: grid;
+    margin-top: 5.5em;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows:repeat(4, 25%);
+    grid-gap: 1em;
+  }
+  #vendor-profile{
+    display: grid;
+    margin-top: 5.5em;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows:repeat(4, 25%);
+    grid-gap: 1em;
+  }
+  .top-box{
+    display: flex;
+    grid-column:1/6;
+    grid-row:1/2;
+    justify-content: space-between;
+    flex-flow: row wrap !important;
+    align-items: center;
+  }
+
+  .top-box:nth-child(2){
+    width:25%;
+  }
+  /* Vendor will be logo and Broker will be picture of self */
+  .profile-pic{
+    max-width: 250px;
+  }
+  .logo-pic{
+    width: 9rem;
+  }
+  .vendor-pic {
+    display: flex;
+    flex-flow: row wrap;
+    grid-column: 2/6;
+    grid-row: 2/5;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .vendor-pic img{
+    /* flex-basis: 33%; */
+    width: 32%;
+  }
+  .youTube{
+    grid-column:2/6;
+    grid-row:2/5;
+    text-align: center;
+  }
+  .youTube iframe{
+    width: 100%;
+    height: 400px;
+  }
+  .contact-info{
+    grid-column:1/2;
+    grid-row-start:2;
+    grid-row-end: 4;
+    max-height: 250px;
+  }
+ }
+
+#message {
+  overflow: visible;
+  background-color: var(--blue);
+}
+
+.modal {
+  display: block;
+  margin: 0 auto;
+  width: 350px;
+  height: 300px;
+  margin-top: 200px;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+#message label {
+  padding-top: 10px;
+}
+
+#message a {
+  color: #333333;
+}
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
+
+
+
+
+
+
+

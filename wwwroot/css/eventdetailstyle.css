@@ -1,0 +1,293 @@
+/* Phone devices */
+@media screen and (max-width : 768px) {
+    .share {
+        padding-top: 30px;
+    }
+
+    #leftsection,
+    #middlesection,
+    #rightsection {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 5%;
+    }
+
+    .prefpics {
+        margin: 5% 2%;
+        text-align: center;
+    }
+
+    .preferred {
+        margin: 5%;
+    }
+
+    .row .form-control {
+        width: 100% !important;
+        margin: auto;
+    }
+
+    .daterangecontainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #leftsection form-group {
+        margin: 10% auto !important;
+    }
+
+    #leftsection label {
+        align-self: center;
+    }
+
+    #leftsection .btn-primary {
+        margin: auto;
+        width: 100%;
+    }
+
+    #middlesection .result {
+        margin: 30px 0px;
+        padding: 30px 0px;
+        box-sizing: border-box;
+    }
+
+    #middlesection .respic{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        width: 80%;
+        border-radius:3px;
+    }
+    
+    #middlesection .resinfo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: center;
+        padding-top: 2%;
+    }
+    
+}
+
+/* Medium devices: 
+fix navbar because it broke
+fix form.dashsearch, form groups, and the search button, div.prefpics & its img in left section
+maybe move the left section to the top, search and prefpics becomes inline-blocks?
+ */
+@media screen and (max-width : 991px) and (min-width: 769px) {
+    .share {
+        padding-top: 30px;
+    }
+
+    #leftsection {
+        width: 100%;
+        height: auto;
+        display: inline-block;
+        padding: 5%;
+    }
+
+    .dashsearch, .pref {
+        display: inline-block;
+        height: 80%;
+    }
+
+    .dashsearch {
+        width: 55%;
+    }
+
+    .pref {
+        width: 40%;
+    }
+
+    #middlesection,
+    #rightsection {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 5%;
+    }
+
+    
+
+    .prefpics {
+        margin: 5% 2%;
+        text-align: center;
+    }
+
+    .preferred {
+        margin: 5%;
+    }
+
+    .row .form-control {
+        width: 100% !important;
+        margin: auto;
+    }
+
+    .daterangecontainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #leftsection form-group {
+        margin: 10% auto !important;
+    }
+
+    #leftsection label {
+        align-self: center;
+    }
+
+    #leftsection .btn-primary {
+        margin: auto;
+        width: 100%;
+    }
+
+    #middlesection .result {
+        margin: 30px 0px;
+        padding: 30px 0px;
+        box-sizing: border-box;
+    }
+
+    #middlesection .respic{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        width: 80%;
+        border-radius:3px;
+    }
+    
+    #middlesection .resinfo{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        text-align: center;
+        padding-top: 2%;
+    }
+
+    .result {
+        height: 200px;
+    }
+
+}
+
+/* Large devices */
+@media only screen and (min-device-width : 1100px) {
+
+    #rightsection .btn {
+        display: block;
+        margin: auto;
+        width: 100%;
+        align-content: center;
+    }  
+}
+
+.ultimatecontainer{
+    background-image: url("../images/open-house.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 35px;
+}
+
+#event-details{
+    margin-top: 15px;
+    height: 100%;
+    padding: 20px;
+}
+
+.respic{
+    /* margin: 3%; */
+    height: auto;
+    width: 100%;
+}
+
+.resinfo.col-sm {
+    display: inline-block;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#event-details h6{
+    font-size: 20px;
+}
+/* 
+#event-details.shadow-box.mb-4 {
+    padding: 10px;
+} */
+
+#event-details h4 {
+    color: black;
+    /* font-weight: bold; */
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.col-sm {
+    /* padding: 10px; */
+    text-align: center;
+}
+
+.vendors-social.col-sm {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto; 
+    text-align: center;
+}
+
+.vendors-social h5 {
+    font-weight: bold;
+    margin-top: 50px;
+    font-size: 14pt;
+}
+
+.vendors {
+    margin: 20px 20px auto;
+    height: 100px;
+    width: auto;
+}
+
+.preferred {
+    width: 80%;
+    height: auto;
+}
+
+.social {
+    margin: 10px 20px auto;
+    height: 50px;
+    width: auto;
+}
+
+#share-ig, #share-fb, #share-tweet, #share-email {
+    overflow: visible;
+}
+
+#share-ig a, #share-fb a, #share-tweet a, #share-email a {
+    overflow: visible;
+    color: #333333;
+    font-size: 10pt;
+}
+
+.modal {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    height: 125px;
+    background-color: rgb(22, 138, 192);
+    margin-top: 300px;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+
+
+
+
+
+

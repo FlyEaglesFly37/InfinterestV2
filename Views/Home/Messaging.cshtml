@@ -1,0 +1,140 @@
+﻿@{
+    ViewData["Title"] = "Messaging";
+}
+
+@section css {
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="@Url.Content("~/css/messagingstyle.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/nav.css")" rel="stylesheet" type="text/css" />
+}
+
+<header>
+    <img src="../images/white-nosub-inflogo.png" alt="logo" class="white-logo">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+      <ul>
+        <li><a href="/dashboard">Home</a></li>
+        <li><a href="http://infinterest.com/#home">About</a></li>
+        <li><a href="/logoff">Sign out</a></li>
+      </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+</header>
+<div class="ultimatecontainer">
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-md-4">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <form class="form-inline mr-auto">
+                                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                                    </form>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <div class="row row-content m-1">
+                                        <div class="col-4">
+                                            <img width="100%" src="../images/1.png" alt="John Smith" />
+                                        </div>
+                                        <div class="col-8">
+                                            <h4>John Smith</h4>
+                                            <p>10:21 AM</p>
+                                            <p id="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                </tr>
+                                <tr>
+                                    <div class="row row-content m-1">
+                                        <div class="col-4">
+                                            <img width="100%" src="../images/2.png" alt="John Smith" />
+                                        </div>
+                                        <div class="col-8">
+                                            <h4>John Smith</h4>
+                                            <p>8:15 AM</p>
+                                            <p id="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                </tr>
+                                <tr>
+                                    <div class="row row-content m-1">
+                                        <div class="col-4">
+                                            <img width="100%" src="../images/3.png" alt="John Smith" />
+                                        </div>
+                                        <div class="col-8">
+                                            <h4>John Smith</h4>
+                                            <p>1:55 AM</p>
+                                            <p id="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                </tr>
+                                <tr>
+                                    <div class="row row-content m-1">
+                                        <div class="col-4">
+                                            <img width="100%" src="../images/4.png" alt="John Smith" />
+                                        </div>
+                                        <div class="col-8">
+                                            <h4>John Smith</h4>
+                                            <p>6:30 AM</p>
+                                            <p id="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                        </div>
+                                    </div>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+            <div class="col-md-8">
+                <div class="p-3 mb-2 bg-dark text-white" style="text-align:center;">
+                   <img class="activepic" width="100%" src="../images/1.png" alt="John Smith" />
+                   <h2 class="inline">Jane Doe</h2>
+                </div>
+                <div style="overflow:auto;">
+                    <table class="table">
+                        <tr class="friend last"> 
+                          <td class="badge badge-pill badge-light mb-3" style="text-align:right; height: 60px;">
+                              <h6>Hi, How are You?</h6>
+                              <p>7:30 PM</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="badge badge-pill badge-primary mb-3" style="text-align:right; height: 60px; float: right;">
+                                <h6> Hi, I am fine.
+                                How about you?</h6>
+                                <p>7:31 PM</p> 
+                          </td>
+                        </tr>
+                        <tr style="float:right;">
+                          <td class="badge badge-pill badge-primary" style="text-align:right; height: 60px;">
+                              <h6>lets meet,
+                                this sunday!</h6>
+                                <p>7:31 PM</p>
+                          </td>
+                        </tr>
+                        <tr class="friend last"> 
+                            <td class="badge badge-pill badge-light mb-3" style="text-align:right; height: 60px;">
+                                <h6>Sounds good. See you then!</h6>
+                                <p>7:33 PM</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row row-content">
+                    <div id="messageInput" class="col-12">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Type something..." aria-label="message" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-primary" type="button"><i class="fa fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>

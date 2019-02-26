@@ -1,0 +1,86 @@
+@{
+    ViewData["Title"] = "Event Detail";
+}
+
+@section css {
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <link href="@Url.Content("~/css/eventdetailstyle.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/nav.css")" rel="stylesheet" type="text/css" />
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+<header>
+    <img src="../images/white-nosub-inflogo.png" alt="logo" class="white-logo">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+        <ul>
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="http://infinterest.com/#home">About</a></li>
+            <li><a href="/messaging">Messaging</a></li>
+            <li><a href="/logoff">Sign out</a></li>
+        </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+</header>
+<div class="ultimatecontainer">
+
+    <div class="container">
+        <div id="event-details" class="shadow-box mb-4">
+            <div class="row">
+                <div class="col-sm">
+                    <img src="../images/home7.jpg" alt="kitchenpic" class="respic">
+                </div>
+                <div class="resinfo col-sm">
+                    <h4>93754 39th Ave W</h4>
+                    <h4>Centerville, WA 90528</h4>
+                    <h6>$849,000</h6>
+                    <h6>January 19, 2019</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                    <p>MLS Listing</p>
+                    <p>34683</p>
+                </div>
+            </div>    
+            <div class="row">
+                <div class="vendors-social col-sm">
+                    <h4>Agent</h4>
+                    <h6>Sarah Thomas</h6>
+                    <a href="/broker-profile"><img src="../images/headshot1.jpg" alt="" class="preferred"></a>
+            
+                </div>
+                <div class="vendors-social col-sm">
+                    <h4>Vendors</h4>
+                    <a href="/vendor-profile" target="_blank"><img src="../images/cupcake.png" alt="" class="vendors"></a>
+                    <a href="/vendor-profile" target="_blank"><img src="../images/jimmyjohns.jpg" alt="" class="vendors"></a>
+                
+                    <h5>Share via Social Media or Email</h5>
+                    <a href="#share-ig" rel="modal:open"><img src="../images/instagram.png" alt="" class="social"></a>
+                    <a href="#share-fb" rel="modal:open"><img src="../images/facebook.png" alt="" class="social"></a>
+                    <a href="#share-tweet" rel="modal:open"><img src="../images/twitter.png" alt="" class="social"></a>
+                    <a href="#share-email" rel="modal:open"><img src="../images/email.png" alt="" class="social"></a>
+                </div>   
+            </div>
+            <div id="share-ig" class="modal">
+                <p>You have successfully shared this event on Instagram!</p>
+                <a href="#" rel="modal:close">Close</a>
+            </div>
+            <div id="share-fb" class="modal">
+                <p>You have successfully shared this event on Facebook!</p>
+                <a href="#" rel="modal:close">Close</a>
+            </div>
+            <div id="share-tweet" class="modal">
+                <p>You have successfully shared this event on Twitter!</p>
+                <a href="#" rel="modal:close">Close</a>
+            </div>
+            <div id="share-email" class="modal">
+                <p>You have successfully shared this event via email!</p>
+                <a href="#" rel="modal:close">Close</a>
+            </div>
+        </div>
+    </div>
+</div>    

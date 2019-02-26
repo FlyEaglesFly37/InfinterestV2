@@ -1,0 +1,281 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+@section css {
+    <link href="@Url.Content("~/css/dashboardstyle.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/css/nav.css")" rel="stylesheet" type="text/css" />
+}
+<header>
+    <img src="../images/white-nosub-inflogo.png" alt="logo" class="white-logo">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav>
+      <ul>
+        <li><a href="http://infinterest.com/#home">About</a></li>
+        <li><a href="/messaging">Messaging</a></li>
+        <li><a href="/logoff">Sign out</a></li>
+      </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+</header>
+<div id="dashboardcontainer">
+
+    <div id="leftsection">
+        <div class="dashsearch">
+            <form action="">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Near:</label>
+                    <div class="col-sm-10" id="input">
+                        <input type="text" class="form-control" placeholder="Zip Code">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Radius:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="mi/km">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="price" class="price">Price Range</label>
+                    <div class="daterangecontainer">
+                        <input type="number" class="form-control daterange" min="10000" max="100000000" value="10000">
+                        <label>to</label>
+                        <input type="number" class="form-control daterange" min="10000" max="100000000" value="100000000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="price" class="price">Date Range</label>
+                    <div class="daterangecontainer">
+                        <input type="date" class="form-control daterange">
+                        <label>to</label>
+                        <input type="date" class="form-control daterange">
+                    </div>
+                </div>
+                <!-- Button trigger modal -->
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModalLong">Search</button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Your search results</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-result">
+                                    <img src="../images/kitchen-1799712_960_720.jpg" alt="kitchenpic" >
+                                    <div>
+                                        <h4>42352 43rd Ave SE</h4>
+                                        <h4>Belletown, WA 90528</h4>
+                                        <h6>June 2, 2019</h6>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est odio. Fusce lacus diam, elementum eget elit in, ultrices consectetur sapien. Aenean tincidunt hendrerit tempus.</p>
+                                        <a href="/event-detail"><h5>Details</h5></a>
+                                    </div>
+                                </div>
+                                <div class="modal-result">
+                                    <img src="../images/home2.jpg" alt="kitchenpic" class="respic">
+                                    <div>
+                                        <h4>44 Main St</h4>
+                                        <h4>Town Center, WA 90543</h4>
+                                        <h6>July 16, 2019</h6>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est odio. Fusce lacus diam, elementum eget elit in, ultrices consectetur sapien. Aenean tincidunt hendrerit tempus.</p>
+                                        <a href="/event-detail"><h5>Details</h5></a>
+                                    </div>
+                                </div>
+                                <div class="modal-result">
+                                    <img src="../images/home3.jpg" alt="kitchenpic" class="respic">
+                                    <div>
+                                        <h4>1234 Address Way</h4>
+                                        <h4>Cityville, WA 90528</h4>
+                                        <h6>August 28, 2019</h6>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est odio. Fusce lacus diam, elementum eget elit in, ultrices consectetur sapien. Aenean tincidunt hendrerit tempus.</p>
+                                        <a href="/event-detail"><h5>Details</h5></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="pref">
+            <label for="price" class="preftitle">Associated Vendors</label>
+            <div class="prefpics">
+                <a href="/vendor-profile"><img src="../images/jimmyjohns.jpg" alt="" class="preferred"></a>
+                <a href="/vendor-profile"><img src="../images/fanta.jpg" alt="" class="preferred"></a>
+                <a href="/vendor-profile"><img src="../images/subway.jpg" alt="" class="preferred"></a>
+                <a href="/vendor-profile"><img src="../images/cupcake.png" alt="" class="preferred"></a>
+
+            </div>
+            <label for="price" class="preftitle">Preferred Brokers</label>
+            <div class="prefpics">
+                <a href="/broker-profile"><img src="../images/headshot1.jpg" alt="" class="preferred"></a>
+                <a href="/broker-profile"><img src="../images/headshot2.jpg" alt="" class="preferred"></a>
+                <a href="/broker-profile"><img src="../images/headshot3.jpg" alt="" class="preferred"></a>
+                <a href="/broker-profile"><img src="../images/headshot4.jpg" alt="" class="preferred"></a>
+                <a href="/broker-profile"><img src="../images/headshot5.jpg" alt="" class="preferred"></a>
+                <a href="/broker-profile"><img src="../images/headshot6.jpg" alt="" class="preferred"></a>
+            </div>
+        </div>
+    </div>
+    <div>
+       <div id="middlesection">
+            <div class="share">
+                <h3><span class="name">Lisa Jones</span> added a new event.</h3>
+                <div class="result">
+                    <img src="../images/kitchen-1799712_960_720.jpg" alt="kitchenpic" class="respic">
+                    <div class="resinfo">
+                        <h4>42352 43rd Ave SE</h4>
+                        <h4>Belletown, WA 90528</h4>
+                        <h6>June 2, 2019</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est odio. Fusce lacus diam, elementum eget elit in, ultrices consectetur sapien. Aenean tincidunt hendrerit tempus.</p>
+                        <a href="/event-detail"><h5>Details</h5></a>
+                    </div>
+                </div>
+            </div>
+            <div class="share">
+                <h3><span class="name">Brady Mitchell</span> reviewed a broker near you.</h3>
+                <div class="result">
+                    <img src="../images/home2.jpg" alt="kitchenpic" class="respic">
+                    <div class="resinfo">
+                        <h4>44 Main St</h4>
+                        <h4>Town Center, WA 90543</h4>
+                        <h6>July 16, 2019</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est odio. Fusce lacus diam, elementum eget elit in, ultrices consectetur sapien. Aenean tincidunt hendrerit tempus.</p>
+                        <a href="/event-detail"><h5>Details</h5></a>
+                    </div>
+                </div>
+            </div>
+            <div class="share">
+                <h3><span class="name">Lisa Jones</span> added a new event.</h3>
+                <div class="result">
+                    <img src="../images/home3.jpg" alt="kitchenpic" class="respic">
+                    <div class="resinfo">
+                        <h4>1234 Address Way</h4>
+                        <h4>Cityville, WA 90528</h4>
+                        <h6>August 28, 2019</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est odio. Fusce lacus diam, elementum eget elit in, ultrices consectetur sapien. Aenean tincidunt hendrerit tempus.</p>
+                        <a href="/event-detail"><h5>Details</h5></a>
+                    </div>
+                </div>
+            </div>
+            <div class="share">
+                <h3><span class="name">Lisa Jones</span> added a new event.</h3>
+                <div class="result">
+                    <img src="../images/home4.jpg" alt="kitchenpic" class="respic">
+                    <div class="resinfo">
+                        <h4>1234 Address Way</h4>
+                        <h4>Cityville, WA 90528</h4>
+                        <h6>Nov. 6, 2019</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est odio. Fusce lacus diam, elementum eget elit in, ultrices consectetur sapien. Aenean tincidunt hendrerit tempus.</p>
+                        <a href="/event-detail"><h5>Details</h5></a>
+                    </div>
+                </div>
+            </div>
+            <div class="share">
+                <h3><span class="name">Lisa Jones</span> added a new event.</h3>
+                <div class="result">
+                    <img src="../images/home5.jpg" alt="kitchenpic" class="respic">
+                    <div class="resinfo">
+                        <h4>3511 2nd Street West</h4>
+                        <h4>Seattle, WA 90528</h4>
+                        <h6>December 5, 2019</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est odio. Fusce lacus diam, elementum eget elit in, ultrices consectetur sapien. Aenean tincidunt hendrerit tempus.</p>
+                        <a href="/event-detail"><h5>Details</h5></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="rightsection">
+            <div class="calendar">
+                <div class="month"> 
+                    <ul>
+                        <li class="prev">&#10094;</li>
+                        <li class="next">&#10095;</li>
+                        <li>January<br><span style="font-size:18px">2019</span></li>
+                    </ul>
+                </div>
+
+                <ul class="weekdays">
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                    <li>Su</li>
+                </ul>
+
+                <ul class="days"> 
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li><span class="active">10</span></li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li><span class="active">19</span></li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li><span class="active">30</span></li>
+                    <li>31</li>
+                </ul>
+            </div> 
+
+            <div>
+                <label class="price upevents">Your Upcoming Events</label>
+                <div class="result">
+                    <img src="../images/home6.jpg" alt="kitchenpic" class="respic">
+                    <div class="resinfo">
+                        <h4>23 5th St</h4>
+                        <h4>Seattle, WA 98005</h4>
+                        <h6>January 10, 2019</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <a href="/event-detail"><h5>Details</h5></a>
+                    </div>
+                </div>
+                <div class="result">
+                    <img src="../images/home7.jpg" alt="kitchenpic" class="respic">
+                    <div class="resinfo">
+                        <h4>92 5th Ave W</h4>
+                        <h4>Seattle, WA 90528</h4>
+                        <h6>January 19, 2019</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <a href="/event-detail"><h5>Details</h5></a>
+                    </div>
+                </div>
+                <a class="btn btn-primary" href="/add-listings">Create Event</a>
+            </div>
+                
+        </div>
+        
+    </div>
+    
+</div>

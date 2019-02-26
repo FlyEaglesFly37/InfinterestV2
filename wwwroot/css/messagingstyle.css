@@ -1,0 +1,57 @@
+body{
+    background-color: #F5F5F5 !important;
+}
+
+#message{
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#messageInput{
+    bottom: 0;
+    position: absolute;
+}
+
+
+.btn-primary{
+    background-color: #35BFFF !important;
+}
+
+.btn-primary:hover{
+    background-color: rgb(22, 138, 192) !important;
+}
+
+.bg-dark{
+    background-color: #F5F5F5 !important;
+}
+
+h2{
+    color: black !important;
+}
+
+.container{
+    /* margin-top: 2%; */
+    padding-top: 70px;
+}
+
+.activepic{
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 2%;
+}
+
+.inline{
+    display: inline;
+    vertical-align: middle;
+}
+
+.badge-primary{
+    background-color: #35BFFF !important;
+}
+
+.mr-sm-2{
+    margin-bottom: 5% !important;
+}
