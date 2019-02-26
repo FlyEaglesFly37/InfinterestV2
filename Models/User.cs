@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Infinterest.Models
 {
-   public class User : BaseEntity
+public class User : BaseEntity
     {   
         public int UserId {get; set;}
         public string UserType {get; set;}
@@ -15,15 +15,15 @@ namespace Infinterest.Models
         public string Bio {get; set;}
         public string Email { get; set; }
         public string Password { get; set; }
-        public virtual Broker Broker {get; set;}
-        public virtual Vendor Vendor {get; set;}
-        public List<Message> Messages {get; set;}
-        public List<MessageGroupUser> MessageGroupUsers {get; set;}
+        public string ImgUrl { get; set; }
+        public int AffiliateCode {get; set;}
+        public string CustomID { get; set; }
+        public string Company { get; set; }
+        public string Website { get; set; }
 
         public User()
         {
-            MessageGroupUsers = new List<MessageGroupUser>();
-            Messages = new List<Message>();
+            
         }
     }   
 }

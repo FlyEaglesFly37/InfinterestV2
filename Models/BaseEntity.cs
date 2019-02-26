@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infinterest.Models
 {
-   public class BaseEntity
+public class BaseEntity
     {  
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public DateTime CreatedAt {get; set;}
@@ -13,5 +13,5 @@ namespace Infinterest.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime UpdatedAt {get; set;}
     }
-   
+
 }

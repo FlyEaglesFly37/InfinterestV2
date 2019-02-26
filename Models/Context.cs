@@ -11,15 +11,10 @@ namespace Infinterest.Models
     // base() calls the parent class' constructor passing the "options" parameter along
         public Context(DbContextOptions<Context> options) : base(options) { }
         public DbSet<User> users { get; set; }
-        public DbSet<MessageGroupUser> messagegroupusers { get; set; }
-        public DbSet<MessageGroup> messagegroups { get; set; }
-        public DbSet<Message> messages { get; set; }
         public DbSet<Vendor> vendors { get; set; }
         public DbSet<Broker> brokers { get; set; }
-        public DbSet<VendorReview> vendorreviews { get; set; }
-        public DbSet<VendorListing> vendorlistings { get; set; }
-        public DbSet<BrokerReview> brokerreviews { get; set; }
         public DbSet<Listing> listings { get; set; }
+        public DbSet<Event> events { get; set; }
 
         // protected override void OnModelCreating(ModelBuilder modelBuilder)
         // {
