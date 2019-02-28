@@ -14,6 +14,7 @@ namespace Infinterest.Controllers
 {
     public class VendorController : Controller
     {
-        
+        // Create vendors
+        // Add vendors to events?
     }
 }

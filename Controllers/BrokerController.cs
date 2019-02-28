@@ -14,6 +14,9 @@ namespace Infinterest.Controllers
 {
     public class BrokerController : Controller
     {
-        
+        // Creates broker profile
+        // Add broker listings
+        // Add events to listings
+        // confrim vendors for events
     }
 }
