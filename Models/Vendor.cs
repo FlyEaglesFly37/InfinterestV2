@@ -7,8 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Infinterest.Models
 {
 public class Vendor : User
-    {   
-        public int VendorId {get; set;}
+    {
         public string AreaOfHouse {get; set;}
         public string BusinessCategory {get; set;}
         public List<Event> PendingEvents {get; set;}

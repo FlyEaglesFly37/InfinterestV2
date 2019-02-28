@@ -6,9 +6,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infinterest.Models
 {
-public class Broker : BaseEntity
-    {   
-        public int BrokerId {get;set;}
+public class Broker : User
+    {
         public List<Listing> Listings {get; set;}
         public List<Event> Events {get; set;}
         
