@@ -6,12 +6,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Infinterest.Models
 {
-public class Broker : BaseEntity
-    {   
-        public int BrokerId {get;set;}
-        public List<Listing> Listings {get; set;}
-        public List<Event> Events {get; set;}
-        
-
-    }   
+    public class EventVendors : BaseEntity
+    {
+        public int EventVendorsId {get;set;}
+        public List<Vendor> PendingVendors {get; set;}
+        public List<Vendor> ConfimedVendors {get; set;}
+    }
 }
