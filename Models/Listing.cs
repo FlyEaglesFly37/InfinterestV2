@@ -21,11 +21,6 @@ namespace Infinterest.Models
 
         public List<Event> Events {get; set;}
         
-
-        public Listing()
-        {
-            Events = new List<Event>();
-        }
         
 
     }   

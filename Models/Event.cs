@@ -7,16 +7,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Infinterest.Models
 {
     public class Event : BaseEntity
-    {   
-        public int ListingID {get; set;}
+    {
+        public int EventId {get; set;}
+        public int ListingId {get; set;}
+        public Listing Listing {get;set;}
         public DateTime OpenHouseDate {get; set;}
-        public List<Vendor> PendingVendors {get; set;}
-        public List<Vendor> ConfimedVendors {get; set;}
-
-        public Event()
-        {
-            PendingVendors = new List<Vendor>();
-            ConfimedVendors = new List<Vendor>();
-        }
+        public EventVendors EventVendors {get; set;}
     }
 }

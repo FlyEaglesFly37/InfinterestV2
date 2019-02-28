@@ -1,0 +1,73 @@
+<div class="container wrapper">
+        <div class="searchbox">
+            <h4>Search Upcoming Open House Events</h4>
+            <form>
+                <div class="form-group whereinput">
+                    <label for="zipcode">Where</label>
+                    <input type="text" class="form-control" placeholder="Zip Code">
+                </div>
+                <div class="form-group">
+                    <label for="zipcode" class="when">When</label>
+                    <input type="date" class="form-control daterange">
+                    <label>to</label>
+                    <input type="date" class="form-control daterange">
+                </div>
+                <div class="form-group">
+                    <label for="price" class="when">Price Range</label>
+                    <input type="number" class="form-control daterange" min="10000" max="100000000" value="10000">
+                    <label>to</label>
+                    <input type="number" class="form-control daterange" min="10000" max="100000000" value="100000000">
+                </div>
+                <!-- Button trigger search modal -->
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#searchModal">Search</button>
+                <!-- Search modal -->
+                <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Your search results</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="modal-result">
+                                    <img src="../images/kitchen-1799712_960_720.jpg" alt="kitchenpic">
+                                    <div>
+                                        <h3>42352 43rd Ave SE</h3>
+                                        <h3>Belletown, WA 90528</h3>
+                                        <h6>June 2, 2019</h6>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est odio. Fusce lacus diam, elementum eget elit in, ultrices consectetur sapien. Aenean tincidunt hendrerit tempus.</p>
+                                        <a href="/event-detail"><h5>Details</h5></a>
+                                    </div>
+                                </div>
+                                <div class="modal-result">
+                                    <img src="../images/home2.jpg" alt="kitchenpic" class="respic">
+                                    <div>
+                                        <h3>44 Main St</h3>
+                                        <h3>Town Center, WA 90543</h3>
+                                        <h6>July 16, 2019</h6>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est odio. Fusce lacus diam, elementum eget elit in, ultrices consectetur sapien. Aenean tincidunt hendrerit tempus.</p>
+                                        <a href="/event-detail"><h5>Details</h5></a>
+                                    </div>
+                                </div>
+                                <div class="modal-result">
+                                    <img src="../images/home3.jpg" alt="kitchenpic" class="respic">
+                                    <div>
+                                        <h3>1234 Address Way</h3>
+                                        <h3>Cityville, WA 90528</h3>
+                                        <h6>August 28, 2019</h6>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac est odio. Fusce lacus diam, elementum eget elit in, ultrices consectetur sapien. Aenean tincidunt hendrerit tempus.</p>
+                                        <a href="/event-detail"><h5>Details</h5></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
