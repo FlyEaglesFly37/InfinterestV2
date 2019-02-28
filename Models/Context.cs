@@ -15,6 +15,7 @@ namespace Infinterest.Models
         public DbSet<Broker> brokers { get; set; }
         public DbSet<Listing> listings { get; set; }
         public DbSet<Event> events { get; set; }
+        public DbSet<EventVendors> eventVendors { get; set; }
 
         // protected override void OnModelCreating(ModelBuilder modelBuilder)
         // {
